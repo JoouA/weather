@@ -17,5 +17,12 @@
         "psr-4": {
             "Jooua\\Weather\\": "src"
         }
+    },
+    "extra" : {
+        "laravel": {
+            "providers": [
+                "Jooua\\Weather\\ServiceProvider"
+            ]
+        }
     }
 }
