@@ -1,13 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 24922
- * Date: 2019/1/17
- * Time: 0:40
+
+/*
+ * This file is part of the jooua/weather.
+ *
+ * (c) jooua <tangwtna@163.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Jooua\Weather;
-
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
