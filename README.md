@@ -26,6 +26,3 @@ _The code contribution process is not very formal. You just need to make sure th
 ## License
 
 MIT
-
-
-fff6a6669e84450f3ff9ee21e5c54db4
