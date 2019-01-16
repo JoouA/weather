@@ -1,9 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: 24922
- * Date: 2019/1/13
- * Time: 22:02
+
+/*
+ * This file is part of the jooua/weather.
+ *
+ * (c) jooua <tangwtna@163.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
  */
 
 namespace Jooua\Weather;
@@ -21,10 +24,12 @@ class Weather
      * @var string
      */
     protected $key;
+
     /**
      * @var array
      */
     protected $guzzleOptions = [];
+
     /**
      * Weather constructor.
      *
@@ -54,7 +59,9 @@ class Weather
     /**
      * @param $city
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -66,7 +73,9 @@ class Weather
     /**
      * @param $city
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -75,12 +84,13 @@ class Weather
         return $this->getWeather($city, 'all', $format);
     }
 
-
     /**
      * @param $city
      * @param string $type
      * @param string $format
+     *
      * @return mixed|string
+     *
      * @throws HttpException
      * @throws InvalidArgumentException
      */
@@ -101,10 +111,12 @@ class Weather
             'output' => $format,
             'extensions' => $type,
         ]);
+
         try {
             $response = $this->getHttpClient()->get($url, [
                 'query' => $query,
             ])->getBody()->getContents();
+
             return 'json' === $format ? \json_decode($response, true) : $response;
         } catch (\Exception $e) {
             throw new HttpException($e->getMessage(), $e->getCode(), $e);
