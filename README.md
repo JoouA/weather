@@ -1,7 +1,9 @@
 <h1 align="center"> weather </h1>
 
-<p align="center"> .</p>
+<p align="center">基于高德地图接口的PHP天气组件</p>
 
+[![Build Status](https://travis-ci.org/JoouA/weather.svg?branch=master)](https://travis-ci.org/JoouA/weather)
+![StyleCI build status](https://github.styleci.io/repos/166061193/shield) 
 
 ## Installing
 
